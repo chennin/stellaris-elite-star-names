@@ -1,4 +1,4 @@
-[![Get it from the Workshop](./steam-workshop.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2900560084)
+[![Get it from the Workshop](https://img.shields.io/badge/steam-%23000000.svg?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=2900560084)
 
 # Elite: Dangerous Star Names for Stellaris
 
