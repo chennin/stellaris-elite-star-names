@@ -1,1 +1,4 @@
 *.zip
+venv
+galaxy.json*
+galaxy_populated.json*
