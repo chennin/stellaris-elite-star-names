@@ -3,13 +3,16 @@ black_hole_names = {
     "Dance of Decay"
     "Dandelion Anomaly"
     "Dryman's Point"
+    "Explorer's Anchorage"
     "Eye of Fatima"
     "Formidine Rift"
     "Gates of Alighieri"
     "Gravitational Nightmare"
     "Gravity Betrothed"
     "Lighthouse of Lemnos"
+    "Mitterand Hollow"
     "Monde de la Mort"
+    "Sagittarius A*"
     "The Abyss"
     "The Conduit"
     "The Veils"
@@ -159,6 +162,7 @@ asteroid_prefix = {
     "Gliese-"
     "Groombridge-"
     "HAT-"
+    "Hats-"
     "HD-"
     "HDS-"
     "HERZ-"
@@ -376,6 +380,7 @@ asteroid_prefix = {
     "SWOIRSTS-"
     "Stock-"
     "TrES-"
+    "Tres-"
     "Trumpler-"
     "UCAC2-"
     "UGCS-"
@@ -421,208 +426,231 @@ asteroid_prefix = {
     "4U-"
 }
 asteroid_postfix = {
-    16
-    34
-    56
-    57
-    82
-    100
-    114
-    132
-    132
-    135
-    151
-    153
-    155
-    177
-    181
-    184
-    190
-    195
-    196
-    210
-    212
+    5
+    24
+    46
+    54
+    58
+    73
+    76
+    77
+    99
+    106
+    115
+    117
+    143
+    148
+    170
+    175
+    193
+    216
+    233
+    245
+    255
     268
-    274
-    286
-    293
-    295
-    297
-    304
-    311
-    323
-    340
-    354
-    355
-    359
-    359
-    360
-    376
-    387
-    390
+    292
+    301
+    325
+    338
+    343
+    349
+    368
+    371
+    373
+    377
+    391
+    399
+    400
     408
-    439
-    456
-    471
-    484
-    496
-    521
-    523
-    545
-    559
-    568
-    583
-    607
-    618
-    632
+    433
+    434
+    447
+    448
+    452
+    457
+    474
+    483
+    504
+    509
+    520
+    529
+    530
+    537
+    560
+    572
+    600
+    606
+    611
+    622
+    630
+    640
+    646
+    648
+    649
     650
-    650
-    657
-    675
-    679
-    688
-    702
-    707
-    708
-    720
-    730
-    749
-    775
-    777
-    778
-    799
-    826
-    838
-    841
+    656
+    678
+    701
+    711
+    724
+    729
+    739
+    770
+    772
+    790
+    792
+    798
+    812
+    846
+    860
     866
-    879
-    903
-    906
-    910
-    921
-    923
-    934
-    940
-    948
-    967
-    981
-    989
-    997
-    998
-    999
-    1007
-    1019
-    1025
-    1028
-    1038
-    1047
-    1050
-    1052
-    1053
-    1065
-    1087
-    1093
-    1095
-    1096
-    1127
-    1132
-    1138
-    1174
-    1176
-    1177
-    1178
-    1192
-    1225
-    1234
+    880
+    886
+    890
+    895
+    904
+    959
+    961
+    965
+    986
+    987
+    992
+    996
+    1016
+    1043
+    1060
+    1068
+    1069
+    1070
+    1074
+    1085
+    1098
+    1102
+    1139
+    1144
+    1151
+    1158
+    1159
+    1164
+    1168
+    1173
+    1175
+    1187
+    1205
+    1206
+    1209
+    1211
+    1212
+    1215
     1238
-    1241
-    1268
-    1270
-    1274
-    1277
-    1282
-    1291
-    1307
-    1333
-    1352
-    1354
+    1263
+    1269
+    1301
+    1303
+    1310
+    1317
+    1322
+    1325
+    1328
+    1332
+    1337
     1357
-    1360
-    1391
+    1364
+    1376
+    1386
+    1387
     1397
-    1401
-    1403
-    1409
-    1418
-    1429
-    1430
+    1398
+    1399
+    1411
+    1412
+    1416
+    1417
+    1434
     1435
-    1439
-    1441
-    1445
-    1460
-    1460
-    1461
-    1465
-    1465
-    1473
-    1489
-    1504
-    1511
-    1513
-    1520
-    1532
-    1538
-    1549
+    1437
+    1452
+    1471
+    1472
+    1478
+    1486
+    1497
+    1507
+    1509
+    1521
+    1531
+    1536
+    1541
+    1553
     1559
-    1559
-    1568
-    1578
-    1582
-    1598
-    1607
-    1607
-    1635
-    1635
-    1635
-    1642
-    1648
-    1653
-    1675
-    1678
-    1681
-    1683
-    1701
-    1721
-    1724
-    1724
-    1725
-    1735
-    1747
-    1751
-    1755
-    1772
+    1572
+    1592
+    1601
+    1625
+    1627
+    1628
+    1638
+    1690
+    1697
+    1709
+    1720
+    1727
+    1741
+    1742
+    1743
     1773
-    1791
-    1793
-    1805
-    1815
-    1821
-    1826
-    1831
+    1786
+    1823
     1835
-    1872
-    1895
-    1905
-    1914
-    1955
-    1972
+    1842
+    1848
+    1850
+    1851
+    1855
+    1858
+    1859
+    1866
+    1871
+    1874
+    1877
+    1887
+    1901
+    1911
+    1913
+    1922
+    1926
+    1931
+    1933
+    1944
+    1952
+    1974
     1976
-    1979
-    1997
-    1998
+    1983
 }
 star_names = {
+    "Amundsen's Star"
+    "Arjun's Vault"
+    "Beagle Point"
+    "Crimson Bayou"
+    "Cyanean Rocks"
+    "Dreamer Blush"
+    "Evelyn's Light"
+    "Gigantor's Temple"
+    "Green Glory"
+    "Ishum's Reach"
+    "Lethe Paratiritís"
+    "Neverest II"
+    "Ost-in-Edhil"
+    "Philomela's Rest"
+    "Rackham's Peak"
+    "Rhadamanthus's Eye"
+    "Rusalka's Trilemma"
+    "Salomé's Reach"
+    "Semotus Beacon"
+    "Shards of Perdition"
+    "Slotin's Latte"
+    "Via Gravitatis"
+    "Zurara"
     "* tet02 Orionis C"
     "1 Aquarii A"
     "1 Arietis"
@@ -1696,7 +1724,6 @@ star_names = {
     "29 e Orionis"
     "29 h Herculis"
     "29 u Tauri"
-    "2M1207"
     "3 Andromedae"
     "3 Aquarii"
     "3 Arietis"
@@ -6384,20 +6411,6 @@ star_names = {
     "Cnepan"
     "Cnepawetel"
     "Cnephtha"
-    "CoRoT-10"
-    "CoRoT-12"
-    "CoRoT-13"
-    "CoRoT-14"
-    "CoRoT-16"
-    "CoRoT-17"
-    "CoRoT-18"
-    "CoRoT-19"
-    "CoRoT-27"
-    "CoRoT-3"
-    "CoRoT-6"
-    "CoRoT-7"
-    "CoRoT-8"
-    "CoRoT-9"
     "Coana"
     "Coano"
     "Coanoa"
@@ -8596,8 +8609,6 @@ star_names = {
     "Hatmehi"
     "Hatmehing"
     "Hatmehit"
-    "Hats-1"
-    "Hats-2"
     "Hau Ku"
     "Hau Yu"
     "Haumea"
@@ -13798,8 +13809,6 @@ star_names = {
     "Oyas"
     "P Eridani"
     "P'urhep"
-    "PH-1"
-    "PH-2"
     "PQ Monocerotis"
     "PU Aurigae"
     "PV Monocerotis"
@@ -15044,7 +15053,6 @@ star_names = {
     "Sagartiaci"
     "Sagartians"
     "Sagi"
-    "Sagittarius A*"
     "Saguenay"
     "Saha"
     "Saha Mati"
@@ -15128,7 +15136,7 @@ star_names = {
     "Samontundji"
     "San"
     "San Ahawa"
-    "San Baltah’Sine"
+    "San Baltah'Sine"
     "San Camasir"
     "San Dan"
     "San Davokje"
@@ -16697,9 +16705,6 @@ star_names = {
     "Tphen Slata"
     "Tphene"
     "TrA X-1"
-    "TrES-1"
-    "TrES-2"
-    "TrES-4"
     "Trakath"
     "Trani"
     "Trante"
@@ -16708,8 +16713,6 @@ star_names = {
     "Treima"
     "Trella"
     "Trepin"
-    "Tres-3"
-    "Tres-5"
     "Trevakat"
     "Tribe"
     "Tribeb"
@@ -29793,27 +29796,4 @@ star_names = {
     "Zunu"
     "Zunuae"
     "Zunue"
-    "Amundsen's Star"
-    "Arjun's Vault"
-    "Beagle Point"
-    "Crimson Bayou"
-    "Cyanean Rocks"
-    "Dreamer Blush"
-    "Evelyn's Light"
-    "Gigantor's Temple"
-    "Green Glory"
-    "Ishum's Reach"
-    "Lethe Paratiritís"
-    "Neverest II"
-    "Ost-in-Edhil"
-    "Philomela's Rest"
-    "Rackham's Peak"
-    "Rhadamanthus's Eye"
-    "Rusalka's Trilemma"
-    "Salomé's Reach"
-    "Semotus Beacon"
-    "Shards of Perdition"
-    "Slotin's Latte"
-    "Via Gravitatis"
-    "Zurara"
 }

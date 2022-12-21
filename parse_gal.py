@@ -4,12 +4,19 @@ import ijson.backends.yajl2_c as ijson
 FILENAME = "galaxy.json"
 #FILENAME = "galaxy_populated.json"
 OUTFILE = "elite_dangerous_names.txt"
+CURFILE = "elite_dangerous_names_curated.txt"
 
 black_hole_names = [ "Dryman's Point", "Formidine Rift", "The Abyss", "The Conduit", "The Veils", "The Void", "Vulcan Gate", "Collection of Wonders", "Monde de la Mort", "Eye of Fatima", "Dance of Decay", "The Chained Beast", "Dandelion Anomaly", "Gravity Betrothed", "Lighthouse of Lemnos", "Gates of Alighieri", "Gravitational Nightmare", "Mitterand Hollow", "Explorer's Anchorage", "Sagittarius A*", ]
 nebula_names = [ "Aquila Dark Region", "Banana Nebula", "Barnard's Loop", "Blinking Nebula", "Blue Flash", "Blue Snowball Nebula", "Bow-Tie Nebula", "Bubble Nebula", "Butterfly Nebula", "California Nebula", "Cat's Eye Nebula", "Cat's Paw Nebula", "Cepheus Dark Region", "Chamaeleon Nebula", "Coalsack Nebula", "Cocoon Nebula", "Corona Australis", "Crab Nebula", "Crescent Nebula", "Dumbbell Nebula", "Eagle Nebula", "Elephant's Trunk", "Eskimo Nebula", "Eta Carinae", "Flame Nebula", "Flaming Star Nebula", "Ghost of Jupiter", "Heart and Soul Nebula", "Helix Nebula", "Hind Nebula", "Horsehead Dark Region", "Horsehead Nebula", "Iris Nebula", "Jellyfish Nebula", "Lagoon Nebula", "Lemon Slice Nebula", "Little Dumbbell Nebula", "Little Gem Nebula", "Little Ghost Nebula", "Lupus Dark Region", "Messier 78", "Monkey Head Nebula", "Musca Dark Region", "NGC 7822", "North America Nebula", "Omega Nebula", "Ophiuchus Dark Regions", "Orion Dark Region", "Orion Nebula", "Owl Nebula", "Parrot's Head", "Pelican Nebula", "Pencil Nebula", "Pipe Bowl and Stem", "Pleiades", "Puppis Dark Region", "R Cra Nebula", "Red Spider Nebula", "Retina Nebula", "Rho Ophiuchi", "Rosette Nebula", "Running Man Nebula", "Scorpius Dark Region", "Scutum Dark Region", "Seagull Nebula", "Skull Nebula", "Skull and Crossbones", "Spirograph Nebula", "Statue of Liberty Nebula", "Struve's Lost Nebula", "Taurus Dark Region", "Thor's Helmet", "Trifid Nebula", "Trifid of the North", "Veil Nebula East", "Veil West Nebula", "Vulpecula Dark Region", "White Eyed Pea Nebula", "Witch Head Nebula", "Achilles's Altar", "Aquila's Halo", "Arcadian Stream", "Elysian Shore", "Empyrean Straits", "Errant Marches", "Formorian Frontier", "Hawking's Gap", "Hieronymus Delta", "Kepler's Crest", "Lyra's Song", "Mare Somnia", "Newton's Vault", "Norma Arm", "Norma Expanse", "Odin's Hold", "Perseus Arm", "Ryker's Hope", "Sanguineous Rim", "Trojan Belt", "Golden Cradle", "Abeona's Blessing", "Crucible's Harvest", "Dr. Kay's Heart", "Rhubarb and Custard", "Viridian Dreams", "Goliath's Sling", "Bohr's Dice", ]
-star_survey_prefixes = [ "2MASS ", "AC ", "ADS ", "AG+", "AGKR ", "ALS ", "BD+", "BD-", "BPM ", "BU ", "CD-", "CF ", "CPC ", "CPD-", "CPO ", "DON ", "DX ", "EGGR ", "EGM ", "FAUST ", "Feige ", "FK5 ", "FS ", "Furuhjelm ", "G146-", "GAT ", "GCRV ", "GD ", "Gl ", "Gliese ", "Groombridge ", "HAT ", "HD ", "HDS ", "HERZ ", "HG ", "HIP ", "HR ", "Kim ", "Kioti ", "Kruger ", "KUI ", "KUV ", "L ", "Lacaille ", "Lalande ", "LAWD ", "LB ", "LDS ", "LEHPM ", "LF ", "LFT ", "LHS ", "LPM ", "LS ", "LSE ", "LTT ", "Luyten ", "MCC ", "MET ", "NLTT ", "NN ", "NSV ", "PLX ", "PMD", "PPM ", "PSPF-LF ", "RBS ", "RMK ", "Ross ", "RST ", "SAO ", "Smethells ", "SPOCS ", "SRS ", "Stein ", "STF ", "StHA ", "StKM ", "Struve ", "TT ", "TYC ", "UBV ", "UGP ", "WISE ", "Wo ", "Wolf ", "XTE", "XO", "YSD2013 ", "1RXS ", "2E ", "2M1207", "2MASX ", "2XMMi ", "AD95 ", "AKARI-IRC-V1 ", "ASR ", "AXP ", "BAG ", "BAR ", "BB2009 ", "BBG2010 ", "BBS2011 ", "BJG2004 ", "BRT ", "BSD ", "BSM2011 ", "Blanco 1 ", "CCAC ", "CCDM ", "CDS ", "CEL ", "CFBDSIR ", "CFHT-", "CLO ", "COO ", "COU ", "COUP ", "CRUCIS ", "CPO2009 ", "CSI+", "CSI-", "CTLGM ", "CXO ", "Cl ", "Cl* ", "CoRoT ", "DBP2006 ", "DEN ", "DETWC ", "DFM2003 ", "DM99 ", "DML87 ", "EM* ", "FHM2008 ", "FMS2006 ", "G 1", "G 2", "G 3", "G 4", "G 5", "G 6", "G 7", "G 8", "G 9", "G 0", "GEN# ", "GFT2002 ", "GGA ", "GGR ", "GHJ2008 ", "GJ ", "GMB2010 ", "GMM2008 ", "GMM2009 ", "GMW2007 ", "GRO ", "GRS ", "GSC ", "GVS98 ", "GWP ", "GZB2006 ", "H1743-", "H97b ", "HAT-P-", "HBC ", "HD2002 ", "HEN ", "HFR2007 ", "HGM2009b ", "HH ", "HHL ", "HRF2005 ", "Haffner ", "Haro ", "Hen ", "IC ", "IDS ", "IGR ", "IHA2007 ", "IHA2008 ", "IRAS ", "IfAHA ", "JBM2010 ", "JVD2011 ", "JW ", "KAG2008 ", "KELT-", "KIC ", "KOI ", "KW97 ", "Kepler-", "LAL96 ", "LEP ", "LGM ", "LIM ", "LOrionis", "LP ", "LZK ", "LkHA ", "M67 ", "MAX ", "MAXI ", "MBO ", "MCW ", "MJD95 ", "MKS2009 ", "MLLA ", "MMS2011 ", "MOA-", "MSJ2009 ", "MWC ", "Melotte ", "NAME ", "NGC ", "NOMAD1 ", "OGLE", "OJV2009 ", "OTS2008 ", "OW94 ", "PCB2009 ", "PCYC ", "PH ", "PMSC ", "PSR ", "PW2010 ", "Parenago ", "Pr ", "RBB2002 ", "RIXOS ", "S171 ", "S87b ", "SBC9 ", "SDSS ", "SHB2004 ", "SHD2009 ", "SHY ", "SLX ", "SNM2009 ", "SO4-H1E ", "SSS ", "SSTGLMC ", "SSTc2d ", "SSTgbs ", "SWIFT ", "SWOIRSTS ", "Stock ", "TrES ", "Trumpler ", "UCAC2 ", "UGCS ", "UGPS ", "USNO-A2.0 ", "V0", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "VES ", "VVO ", "VXR ", "WASP-", "WBBe ", "WBG2011 ", "WD ", "WDS ", "WMW2010 ", "WR ", "WRAY ", "WSI ", "BDS ", "Csi+", "EQ ", "EXO ", "FB ", "GR ", "Gmb ", "Goy ", "HJ ", "Corot ", "BrsO ", "ICZ", "CXO", "UCAC3 ", "MSR2009 ", "4U ", ]
+star_survey_prefixes = [ "2MASS ", "AC ", "ADS ", "AG+", "AGKR ", "ALS ", "BD+", "BD-", "BPM ", "BU ", "CD-", "CF ", "CPC ", "CPD-", "CPO ", "DON ", "DX ", "EGGR ", "EGM ", "FAUST ", "Feige ", "FK5 ", "FS ", "Furuhjelm ", "G146-", "GAT ", "GCRV ", "GD ", "Gl ", "Gliese ", "Groombridge ", "HAT ", "Hats-", "HD ", "HDS ", "HERZ ", "HG ", "HIP ", "HR ", "Kim ", "Kioti ", "Kruger ", "KUI ", "KUV ", "L ", "Lacaille ", "Lalande ", "LAWD ", "LB ", "LDS ", "LEHPM ", "LF ", "LFT ", "LHS ", "LPM ", "LS ", "LSE ", "LTT ", "Luyten ", "MCC ", "MET ", "NLTT ", "NN ", "NSV ", "PLX ", "PMD", "PPM ", "PSPF-LF ", "RBS ", "RMK ", "Ross ", "RST ", "SAO ", "Smethells ", "SPOCS ", "SRS ", "Stein ", "STF ", "StHA ", "StKM ", "Struve ", "TT ", "TYC ", "UBV ", "UGP ", "WISE ", "Wo ", "Wolf ", "XTE", "XO", "YSD2013 ", "1RXS ", "2E ", "2M1207", "2MASX ", "2XMMi ", "AD95 ", "AKARI-IRC-V1 ", "ASR ", "AXP ", "BAG ", "BAR ", "BB2009 ", "BBG2010 ", "BBS2011 ", "BJG2004 ", "BRT ", "BSD ", "BSM2011 ", "Blanco 1 ", "CCAC ", "CCDM ", "CDS ", "CEL ", "CFBDSIR ", "CFHT-", "CLO ", "COO ", "COU ", "COUP ", "CRUCIS ", "CPO2009 ", "CSI+", "CSI-", "CTLGM ", "CXO ", "Cl ", "Cl* ", "CoRoT-", "DBP2006 ", "DEN ", "DETWC ", "DFM2003 ", "DM99 ", "DML87 ", "EM* ", "FHM2008 ", "FMS2006 ", "G 1", "G 2", "G 3", "G 4", "G 5", "G 6", "G 7", "G 8", "G 9", "G 0", "GEN# ", "GFT2002 ", "GGA ", "GGR ", "GHJ2008 ", "GJ ", "GMB2010 ", "GMM2008 ", "GMM2009 ", "GMW2007 ", "GRO ", "GRS ", "GSC ", "GVS98 ", "GWP ", "GZB2006 ", "H1743-", "H97b ", "HAT-P-", "HBC ", "HD2002 ", "HEN ", "HFR2007 ", "HGM2009b ", "HH ", "HHL ", "HRF2005 ", "Haffner ", "Haro ", "Hen ", "IC ", "IDS ", "IGR ", "IHA2007 ", "IHA2008 ", "IRAS ", "IfAHA ", "JBM2010 ", "JVD2011 ", "JW ", "KAG2008 ", "KELT-", "KIC ", "KOI ", "KW97 ", "Kepler-", "LAL96 ", "LEP ", "LGM ", "LIM ", "LOrionis", "LP ", "LZK ", "LkHA ", "M67 ", "MAX ", "MAXI ", "MBO ", "MCW ", "MJD95 ", "MKS2009 ", "MLLA ", "MMS2011 ", "MOA-", "MSJ2009 ", "MWC ", "Melotte ", "NAME ", "NGC ", "NOMAD1 ", "OGLE", "OJV2009 ", "OTS2008 ", "OW94 ", "PCB2009 ", "PCYC ", "PH-", "PMSC ", "PSR ", "PW2010 ", "Parenago ", "Pr ", "RBB2002 ", "RIXOS ", "S171 ", "S87b ", "SBC9 ", "SDSS ", "SHB2004 ", "SHD2009 ", "SHY ", "SLX ", "SNM2009 ", "SO4-H1E ", "SSS ", "SSTGLMC ", "SSTc2d ", "SSTgbs ", "SWIFT ", "SWOIRSTS ", "Stock ", "TrES-", "Tres-", "Trumpler ", "UCAC2 ", "UGCS ", "UGPS ", "USNO-A2.0 ", "V0", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "VES ", "VVO ", "VXR ", "WASP-", "WBBe ", "WBG2011 ", "WD ", "WDS ", "WMW2010 ", "WR ", "WRAY ", "WSI ", "BDS ", "Csi+", "EQ ", "EXO ", "FB ", "GR ", "Gmb ", "Goy ", "HJ ", "Corot ", "BrsO ", "ICZ", "CXO", "UCAC3 ", "MSR2009 ", "4U ", ]
+ss_tuple = tuple( star_survey_prefixes )
 #rx = re.compile(''.join(['^(?:', '|'.join(star_survey_prefixes), ')']))
 manual_stars = [ "Beagle Point", "Ishum's Reach", "Semotus Beacon", "Salomé's Reach", "Lethe Paratiritís", "Amundsen's Star", "Via Gravitatis", "Cyanean Rocks", "Green Glory", "Zurara", "Dreamer Blush", "Neverest II", "Philomela's Rest", "Gigantor's Temple", "Rackham's Peak", "Evelyn's Light", "Ost-in-Edhil", "Rhadamanthus's Eye", "Slotin's Latte", "Rusalka's Trilemma", "Shards of Perdition", "Arjun's Vault", "Crimson Bayou", ]
+constellations = [ "Andromedae", "Antliae", "Apodis", "Aquarii", "Aquilae", "Arae", "Arietis", "Aurigae", "Bootis", "Caeli", "Camelopardalis", "Cancri", "Canun Venaticorum", "Canis Majoris", "Canis Minoris", "Capricorni", "Carinae", "Cassiopeiae", "Centauri", "Cephei", "Ceti", "Chamaleontis", "Circini", "Columbae", "Comae Berenices", "Coronae Australis", "Coronae Borealis", "Corvi", "Crateris", "Crucis", "Cygni", "Delphini", "Doradus", "Draconis", "Equulei", "Eridani", "Fornacis", "Geminorum", "Gruis", "Herculis", "Horologii", "Hydrae", "Hydri", "Indi", "Lacertae", "Leonis", "Leonis Minoris", "Leporis", "Librae", "Lupi", "Lyncis", "Lyrae", "Mensae", "Microscopii", "Monocerotis", "Muscae", "Normae", "Octantis", "Ophiuchi", "Orionis", "Pavonis", "Pegasi", "Persei", "Phoenicis", "Pictoris", "Piscium", "Pisces Austrini", "Puppis", "Pyxidis", "Reticuli", "Sagittae", "Sagittarii", "Scorpii", "Sculptoris", "Scuti", "Serpentis", "Sextantis", "Tauri", "Telescopii", "Trianguli", "Trianguli Australis", "Tucanae", "Ursae Majoris", "Ursae Minoris", "Velorum", "Virginis", "Volantis", "Vulpeculae", ]
+cons_re = []
+for cons in constellations:
+  reg = rf"\b{cons}\b"
+  cons_re.append( re.compile(reg) )
 
 start_time = time.time()
 f = open(FILENAME, "rb")
@@ -20,9 +27,12 @@ outsystems = []
 procgen = set()
 # Seagull Sector DL-Y d3
 procgenre = re.compile(r"^(.+?) [A-Z]{2}-[A-Z] [a-h]\d+")
+capre = re.compile(r"[A-Z]{2,}")
+capspacere = re.compile(r"^[A-Za-z] ")
+numre = re.compile(r"\d+")
 
 def starts_with_prefix(sys):
-  if sys.startswith(tuple(star_survey_prefixes)):
+  if sys.startswith(ss_tuple):
     return True
 #  if rx.match(sys):
 #    return True
@@ -33,7 +43,15 @@ def starts_with_prefix(sys):
 #      return True
   return False
 
+def contains_constellation(sys):
+  for consre in cons_re:
+#    if cons in sys:
+    if consre.search(sys):
+      return True
+  return False
+
 for system in systems:
+  system = system.strip()
   #print(system)
   if starts_with_prefix(system):
     continue
@@ -52,38 +70,51 @@ for system in systems:
 print("Parse time: {}".format( time.time() - start_time ), file=sys.stderr)
 start_time = time.time()
 
-with open(OUTFILE, "w") as o:
-  o.write("black_hole_names = {\n")
+o = open(OUTFILE, "w")
+c = open(CURFILE, "w")
+for file in [ o, c ]:
+  file.write("black_hole_names = {\n")
   for bh in sorted(black_hole_names):
-    o.write(f"    \"{bh}\"\n")
-  o.write("}\n")
+    file.write(f"    \"{bh}\"\n")
+  file.write("}\n")
 
-  o.write("nebula_names = {\n")
+  file.write("nebula_names = {\n")
   for n in sorted(nebula_names):
-    o.write(f"    \"{n}\"\n")
-  o.write("}\n")
+    file.write(f"    \"{n}\"\n")
+  file.write("}\n")
 
-  o.write("asteroid_prefix = {\n")
+  file.write("asteroid_prefix = {\n")
   for p in star_survey_prefixes:
     p = p.replace(" ", "-")
-    if '-' not in p:
+    if p[-1] not in ['-', '+']:
       p = f"{p}-"
-    o.write("    \"{}\"\n".format(p))
-  o.write("}\n")
+    file.write("    \"{}\"\n".format(p))
+  file.write("}\n")
 
-  o.write("asteroid_prefix = {\n")
+  file.write("asteroid_postfix = {\n")
   for num in sorted(random.sample(range(1, 2000), 200)):
-    o.write("    {}\n".format(num))
-  o.write("}\n"
+    file.write("    {}\n".format(num))
+  file.write("}\n"
 )
-  o.write("star_names = {\n")
-  for s in sorted(outsystems):
-    o.write(f"    \"{s}\"\n")
-  for pg in sorted(procgen):
-    if "Sector" not in pg and "Region" not in pg:
-      o.write(f"    \"{pg}\"\n")
+  file.write("star_names = {\n")
   for s in sorted(manual_stars):
-    o.write(f"    \"{s}\"\n")
-  o.write("}\n")
+    file.write(f"    \"{s}\"\n")
 
+for s in sorted(outsystems):
+  o.write(f"    \"{s}\"\n")
+  if capre.search(s) or numre.search(s) or capspacere.search(s):
+    continue
+  if contains_constellation(s):
+    continue
+  c.write(f"    \"{s}\"\n")
+
+for pg in sorted(procgen):
+  if "Sector" not in pg and "Region" not in pg:
+    o.write(f"    \"{pg}\"\n")
+
+o.write("}\n")
+c.write("}\n")
+
+c.close()
+o.close()
 print("Write time: {}".format( time.time() - start_time ), file=sys.stderr)
