@@ -3,4 +3,4 @@ tags={
 	"Galaxy Generation"
 }
 name="Even More Elite: Dangerous Star Names"
-supported_version="3.6.*"
+supported_version="3.7.*"

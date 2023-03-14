@@ -3,6 +3,6 @@ tags={
 	"Galaxy Generation"
 }
 name="Elite: Dangerous Star Names"
-supported_version="3.6.*"
-path="C:/Users/Chris/Documents/Paradox Interactive/Stellaris/mod/ed-star-names"
+supported_version="3.7.*"
+path="C:/Users/Chris/repos/stellaris-elite-star-names/elite-dangerous-star-names"
 remote_file_id="2904925738"
