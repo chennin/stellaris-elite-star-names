@@ -9,3 +9,12 @@ Even More Names: [![Get it from the Workshop](https://img.shields.io/badge/steam
 Data dumps can be downloaded from https://spansh.co.uk/dumps
 
 This Python script is certainly slow (~2.5h on my desktop).
+
+# Uploading
+
+```
+STEAMUSER=
+for file in steamcmd*.txt; do
+  steamcmd +login $STEAMUSER +workshop_build_item "$PWD/${file}" +quit
+done
+```
