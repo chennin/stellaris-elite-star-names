@@ -14,7 +14,7 @@ This Python script is certainly slow (~2.5h on my desktop).
 
 ```
 STEAMUSER=
-for file in steamcmd*.txt; do
+for file in $(ls steamcmd*.txt | sort -r); do
   steamcmd +login $STEAMUSER +workshop_build_item "$PWD/${file}" +quit
 done
 ```
