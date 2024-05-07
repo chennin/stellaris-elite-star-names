@@ -14,7 +14,10 @@ This Python script is certainly slow (~2.5h on my desktop).
 
 ```
 STEAMUSER=
+WBI=""
 for file in $(ls steamcmd*.txt | sort -r); do
-  steamcmd +login $STEAMUSER +workshop_build_item "$PWD/${file}" +quit
+  WBI="${WBI} +workshop_build_item /code/${file}"
 done
+podman run -v $PWD:/code:ro -v steamcmd-data:/data -v steamcmd-root:/root/.local/share/Steam -it steamcmd/steamcmd:debian-12 \
+  +login $STEAMUSER ${WBI} +quit
 ```
